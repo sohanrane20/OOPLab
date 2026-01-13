@@ -2,7 +2,7 @@ package lab1;
 import java.util.Scanner;
 class Compare
 {
-	int a, b;
+	private int a, b;
 	Compare(int a, int b)
 	{
 		this.a = a;
@@ -35,5 +35,6 @@ public class CompareNumbers
 		int b = input.nextInt();
 		Compare comparison = new Compare(a, b);
 		comparison.compareNumbers();
+		input.close();
 	}
 }
