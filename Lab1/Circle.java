@@ -3,14 +3,11 @@ import java.util.Scanner;
 import java.lang.Math;
 class CircleRadius
 {
-	int radius;
+	int radius, diameter;
 	CircleRadius(int radius)
 	{
 		this.radius = radius;
-	}
-	int diameter()
-	{
-		return 2 * radius;
+		this.diameter = 2 * radius;
 	}
 	double circumference()
 	{
@@ -30,8 +27,9 @@ public class Circle
 		int radius = input.nextInt();
 		CircleRadius circle = new CircleRadius(radius);
 		System.out.println("Radius of Circle is " + circle.radius);
-		System.out.println("Diameter of Circle is " + circle.diameter());
+		System.out.println("Diameter of Circle is " + circle.diameter);
 		System.out.println("Circumference of Circle is " + circle.circumference());
 		System.out.println("Area of Circle is " + circle.area());
+		input.close();
 	}
 }
