@@ -2,25 +2,23 @@ package lab1;
 import java.util.Scanner;
 class IndivisualDigits
 {
-	int number;
+	private int number;
 	IndivisualDigits(int number)
 	{
 		this.number = number;
 	}
-	void separateDigits(int count)
+	void separateDigits()
 	{
-		int temp = number, i;
-		int[] digits = new int[count];
-		i = 0;
+		int temp = number, rev = 0;
 		while (temp > 0)
 		{
-			digits[i] = temp % 10;
+			rev = rev * 10 + temp % 10;
 			temp /= 10;
-			i++;
 		}
-		for (i = count - 1; i >= 0; i--)
+		while (rev > 0)
 		{
-			System.out.print(digits[i] + "   ");
+			System.out.print(rev % 10 + "   ");
+			rev /= 10;
 		}
 	}
 }
@@ -46,6 +44,7 @@ public class SeparateIndivisualDigits
 		} while (count != 5);
 		IndivisualDigits digits = new IndivisualDigits(number);
 		System.out.print("The indivisual digits of " + number + " are ");
-		digits.separateDigits(count);
+		digits.separateDigits();
+		input.close();
 	}
 }
