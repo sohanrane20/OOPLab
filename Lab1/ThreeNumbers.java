@@ -2,7 +2,7 @@ package lab1;
 import java.util.Scanner;
 class ManipulateNumbers
 {
-	int[] numbers = new int[3];
+	private int[] numbers = new int[3];
 	ManipulateNumbers(int[] numbers)
 	{
 		this.numbers = numbers;
@@ -102,5 +102,6 @@ public class ThreeNumbers
 					System.out.println("Invalid choice");
 			}
 		} while (choice >= 1 && choice <= 5);
+		input.close();
 	}
 }
