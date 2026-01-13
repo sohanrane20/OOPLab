@@ -2,7 +2,7 @@ package lab1;
 import java.util.Scanner;
 class CalculateResult
 {
-	float a, b;
+	private float a, b;
 	CalculateResult(float a, float b)
 	{
 		this.a = a;
@@ -76,5 +76,6 @@ public class Calculator
 					System.out.println("Invalid choice");
 			}
 		} while (choice >= 1 && choice <= 5);
+		input.close();
 	}
 }
