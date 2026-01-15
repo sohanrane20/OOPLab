@@ -26,10 +26,10 @@ public class Circle
 		System.out.print("Enter radius: ");
 		int radius = input.nextInt();
 		CircleRadius circle = new CircleRadius(radius);
-		System.out.println("Radius of Circle is " + circle.radius);
-		System.out.println("Diameter of Circle is " + circle.diameter);
-		System.out.println("Circumference of Circle is " + circle.circumference());
-		System.out.println("Area of Circle is " + circle.area());
+		System.out.println("Radius of circle is " + circle.radius);
+		System.out.println("Diameter of circle is " + circle.diameter);
+		System.out.println("Circumference of circle is " + circle.circumference());
+		System.out.println("Area of circle is " + circle.area());
 		input.close();
 	}
 }
