@@ -2,7 +2,7 @@ package lab4;
 import java.util.Scanner;
 interface Function
 {
-	public int evaluate(int number);
+	public abstract int evaluate(int number);
 }
 class Half implements Function
 {
@@ -42,3 +42,4 @@ public class Client
 		input.close();
 	}
 }
+
