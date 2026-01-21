@@ -4,11 +4,11 @@ class Sphere extends Figure
 	double r, a, v;
 	public void calcArea()
 	{
-		a = 4 * pi * r * r;
+		a = 4 * PI * r * r;
 	}
 	public void calcVol()
 	{
-		v = 4 * pi * r * r * r / 3;
+		v = 4 * PI * r * r * r / 3;
 	}
 	public void dispArea()
 	{
@@ -18,4 +18,5 @@ class Sphere extends Figure
 	{
 		System.out.println("Volume of sphere is " + v);
 	}
+
 }
