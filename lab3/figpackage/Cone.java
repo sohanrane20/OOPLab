@@ -4,11 +4,11 @@ class Cone extends Figure
 	double r, h, l, a, v;
 	public void calcArea()
 	{
-		a = 2 * pi * r * l + pi * r * r;
+		a = 2 * PI * r * l + PI * r * r;
 	}
 	public void calcVol()
 	{
-		v = pi * r * r * h / 3;
+		v = PI * r * r * h / 3;
 	}
 	public void dispArea()
 	{
@@ -18,4 +18,5 @@ class Cone extends Figure
 	{
 		System.out.println("Volume of cone is " + v);
 	}
+
 }
