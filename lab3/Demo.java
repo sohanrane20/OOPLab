@@ -2,7 +2,7 @@ package lab3;
 import java.util.Scanner;
 abstract class Figure
 {
-	double pi = 3.142;
+	public static final double PI = 3.142;
 	public abstract void calcArea();
 	public abstract void calcVol(); 
 	public abstract void dispArea();
@@ -13,11 +13,11 @@ class Cone extends Figure
 	double r, h, l, a, v;
 	public void calcArea()
 	{
-		a = 2 * pi * r * l + pi * r * r;
+		a = 2 * PI * r * l + PI * r * r;
 	}
 	public void calcVol()
 	{
-		v = pi * r * r * h / 3;
+		v = PI * r * r * h / 3;
 	}
 	public void dispArea()
 	{
@@ -33,11 +33,11 @@ class Sphere extends Figure
 	double r, a, v;
 	public void calcArea()
 	{
-		a = 4 * pi * r * r;
+		a = 4 * PI * r * r;
 	}
 	public void calcVol()
 	{
-		v = 4 * pi * r * r * r / 3;
+		v = 4 * PI * r * r * r / 3;
 	}
 	public void dispArea()
 	{
@@ -53,11 +53,11 @@ class Cylinder extends Figure
 	double r, h, a, v;
 	public void calcArea()
 	{
-		a = 2 * pi * r * h + pi * r * r;
+		a = 2 * PI * r * h + PI * r * r;
 	}
 	public void calcVol()
 	{
-		v = pi * r * r * h / 3;
+		v = PI * r * r * h / 3;
 	}
 	public void dispArea()
 	{
@@ -103,3 +103,4 @@ public class Demo
 		input.close();
 	}
 }
+
