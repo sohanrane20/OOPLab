@@ -67,8 +67,9 @@ public class InvoiceTest
 	{
 		Scanner input = new Scanner(System.in);
 		String partNumber, partDescription;
-		int quantity, choice;
+		int quantity;
 		double price;
+		char choice;
 		System.out.print("Enter part number: ");
 		partNumber = input.nextLine();
 		System.out.print("Enter part description: ");
@@ -80,56 +81,26 @@ public class InvoiceTest
 		Invoice invoice = new Invoice(partNumber, partDescription, quantity, price);
 		do
 		{
-			System.out.println("\n1: Get part number");
-			System.out.println("2: Get part description");
-			System.out.println("3: Get quantity of item");
-			System.out.println("4: Get price per item");
-			System.out.println("5: Set part number");
-			System.out.println("6: Set part description");
-			System.out.println("7: Set quantity of item");
-			System.out.println("8: Set price per item");
-			System.out.println("9: Get invoice amount");
-			System.out.print("Enter choice: ");
-			choice = input.nextInt();
-			switch (choice)
+			System.out.println("\nPart number is " + invoice.getPartNumber());
+			System.out.println("Part description is " + invoice.getPartDescription());
+			System.out.println("Quantity of item is " + invoice.getQuantity());
+			System.out.println("Price per item is " + invoice.getPrice());
+			System.out.println("\nInvoice amount is " + invoice.getInvoiceAmount());
+			input.nextLine();
+			System.out.print("\nDo you want to edit invoice? ");
+			choice = input.nextLine().toUpperCase().charAt(0);
+			if (choice == 'Y')
 			{
-				case 1:
-					System.out.println("\nPart number is " + invoice.getPartNumber());
-					break;
-				case 2:
-					System.out.println("\nPart description is " + invoice.getPartDescription());
-					break;
-				case 3:
-					System.out.println("\nQuantity of item is " + invoice.getQuantity());
-					break;
-				case 4:
-					System.out.println("\nPrice per item is " + invoice.getPrice());
-					break;
-				case 5:
-					System.out.print("\nEnter new part number: ");
-					input.nextLine();
-					invoice.setPartNumber(input.nextLine());
-					break;
-				case 6:
-					System.out.print("\nEnter new part description: ");
-					input.nextLine();
-					invoice.setPartDescription(input.nextLine());
-					break;
-				case 7:
-					System.out.print("\nEnter new quantity of item: ");
-					invoice.setQuantity(input.nextInt());
-					break;
-				case 8:
-					System.out.print("\nEnter new price per item: ");
-					invoice.setPrice(input.nextDouble());
-					break;
-				case 9:
-					System.out.println("\nInvoice amount is " + invoice.getInvoiceAmount());
-					break;
-				default:
-					System.out.println("Invalid choice");
+				System.out.print("\nEnter part number: ");
+				invoice.setPartNumber(input.nextLine());
+				System.out.print("Enter part description: ");
+				invoice.setPartDescription(input.nextLine());
+				System.out.print("Enter quantity of item: ");
+				invoice.setQuantity(input.nextInt());
+				System.out.print("Enter price per item: ");
+				invoice.setPrice(input.nextDouble());
 			}
-		} while (choice >= 1 && choice <= 9);
+		} while (choice == 'Y');
 		input.close();
 	}
 }
