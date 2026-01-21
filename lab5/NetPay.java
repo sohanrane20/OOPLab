@@ -2,7 +2,7 @@ package lab5;
 import java.util.Scanner;
 interface Salary
 {
-	int taxRate = 15, hourlyRate = 12;
+	int TAX_RATE = 15, HOURLY_RATE = 12;
 	void calculateGrossPay();
 	void calculateTax();
 	void calculateNetPay();
@@ -16,11 +16,11 @@ class CalculateTax implements Salary
 	}
 	public void calculateGrossPay()
 	{
-		grossPay = hours * hourlyRate / 100;
+		grossPay = hours * HOURLY_RATE / 100;
 	}
 	public void calculateTax()
 	{
-		tax = grossPay * taxRate / 100; 
+		tax = grossPay * TAX_RATE / 100; 
 	}
 	public void calculateNetPay()
 	{
@@ -48,3 +48,4 @@ public class NetPay
 		input.close();
 	}
 }
+
