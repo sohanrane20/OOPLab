@@ -11,7 +11,7 @@ abstract class QuizResult
 	protected char[] correctAnswers = {'C', 'A', 'B', 'D', 'B', 'C', 'C', 'A'};
 	protected char[] submittedAnswers = new char[8]; 
 	protected Status[] result = new Status[8];
-	public final int passMarks = 5;
+	public final int PASS_MARKS = 5;
 	QuizResult(char[] submittedAnswers)
 	{
 		this.submittedAnswers = submittedAnswers;
@@ -47,7 +47,7 @@ class Report extends QuizResult
 	}
 	boolean hasPassed()
 	{
-		return correct >= passMarks;
+		return correct >= PASS_MARKS;
 	}
 	void printReport()
 	{
@@ -93,3 +93,4 @@ public class Quiz
 		input.close();
 	}
 }
+
