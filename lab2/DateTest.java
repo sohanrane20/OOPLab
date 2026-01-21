@@ -44,11 +44,11 @@ public class DateTest
 	{
 		Scanner input = new Scanner(System.in);
 		int day, month, year;
-		System.out.print("Enter Day: ");
+		System.out.print("Enter day: ");
 		day = input.nextInt();
-		System.out.print("Enter Month: ");
+		System.out.print("Enter month: ");
 		month = input.nextInt();
-		System.out.print("Enter Year: ");
+		System.out.print("Enter year: ");
 		year = input.nextInt();
 		Date date = new Date(day, month, year);
 		System.out.print("Date is ");
@@ -56,3 +56,4 @@ public class DateTest
 		input.close();
 	}
 }
+
