@@ -1,2 +1,2 @@
 # OOPLab
-Java programs based on OOP concepts
+Java programs on OOP concepts
